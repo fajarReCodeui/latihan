@@ -33,7 +33,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('latihan') }}">{{ __('Latihan 1') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('latihan.2') }}">{{ __('Latihan 2') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

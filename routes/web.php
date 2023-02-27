@@ -26,4 +26,10 @@ Route::group(['prefix'=> 'latihan'], function(){
     route::get('/edit/{crud}', 'Crud\CrudController@edit')->name('latihan.edit');
     route::put('/update/{crud}', 'Crud\CrudController@update')->name('latihan.update');
     route::delete('/destroy/{crud}', 'Crud\CrudController@destroy')->name('latihan.destroy');
+
+
+    route::get('2','Latihan2\MultipleController@index')->name('latihan.2');
+    route::get('create/multiple','Latihan2\MultipleController@create')->name('latihan.create.multiple');
+    route::post('store/multiple','Latihan2\MultipleController@store')->name('latihan.store.multiple');
+    route::get('edit/multiple/{book}','Latihan2\MultipleController@edit')->name('latihan.edit.multiple');
 });
