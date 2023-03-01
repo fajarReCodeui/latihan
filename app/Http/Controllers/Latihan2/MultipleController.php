@@ -11,8 +11,8 @@ class MultipleController extends Controller
 {
   public function index()
   {
-    $categorys = Category::all();
-    $books     = Book::all();
+    $categorys = Category::with('books')->get();
+    $books     = Book::with('category')->get();
     return view('latihan.multiple.index', compact('categorys','books'));
   }
   public function create()

@@ -17,7 +17,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Jenis</label>
-                    <input type="text" name="types" id="" value="{{$book->category->types}} class="form-control">
+                    <input type="text" name="types" id="" value="{{$book->category->types}}" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Nama Buku</label>

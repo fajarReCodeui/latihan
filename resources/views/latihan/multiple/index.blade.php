@@ -7,7 +7,7 @@
             <a href="{{route('latihan.create.multiple')}}" class="btn btn-info">Tambah Data</a>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div>
@@ -22,6 +22,10 @@
                                 <tr>
                                     <th>name</th>
                                     <th>types</th>
+                                    <th>nama buku</th>
+                                    <th>tanggal terbit</th>
+                                    <th>nama pengarang</th>
+                                    <th>total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,6 +33,10 @@
                                 <tr>
                                     <td>{{$category->name}}</td>
                                     <td>{{$category->types}}</td>
+                                    <td>{{$category->books->first()->name}}</td>
+                                    <td>{{$category->books->first()->tanggal_terbit}}</td>
+                                    <td>{{$category->books->first()->nama_pengarang}}</td>
+                                    <td>{{$category->books->first()->total}}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -36,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div>
@@ -49,7 +57,8 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>category id</th>
+                                    <th>Nama Category</th>
+                                    <th>Jenis Category</th>
                                     <th>nama buku</th>
                                     <th>tanggal terbit</th>
                                     <th>nama pengarang</th>
@@ -61,9 +70,10 @@
                                 <tr>
                                     <td>
                                         <a href="{{route('latihan.edit.multiple',$book->id)}}" class="btn btn-outline-waring btn-sm">
-                                            {{$book->category_id}}
+                                            {{$book->category->name}}
                                         </a>
                                     </td>
+                                    <td>{{$book->category->types}}</td>
                                     <td>{{$book->name}}</td>
                                     <td>{{$book->tanggal_terbit}}</td>
                                     <td>{{$book->nama_pengarang}}</td>
